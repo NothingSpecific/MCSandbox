@@ -41,7 +41,8 @@ export WURST_OPENAI_KEY='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'	# 
 										# No this API key is not valid, but you can set your own
 										# if you want to use Wurst's chat autocomplete
 
-										# If you are a server owner who blocks Fabric, stop it! That's not cool. Some people like running mods like Sodium and No Chat Reports
+										# If you are a server owner who blocks Fabric, stop it! That's not cool
+										# Some people like running mods like Sodium and No Chat Reports
 
 # This command was written for X11 and has not been tested on Wayland
 CMD=(bwrap --ro-bind / / --tmpfs /var/tmp --tmpfs /home/ --tmpfs /tmp \
