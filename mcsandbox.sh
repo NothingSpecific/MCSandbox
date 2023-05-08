@@ -23,9 +23,13 @@ declare -a EXTRA_OPTS=()
 declare -a COMMAND=()
 
 for i in "$@"; do
-	if [[ "$i" == "--full-launcher-access" ]]; then
+	if [[ "$i" == "--full-launcher-access" ]]; then	# Not recommended. A malicious instance with full launcher access can
+							# escape the sandbox by rewriting the launcher's configuration
+							# to run malicious code outside of the sandbox
 		EXTRA_OPTS+=(--bind ~/.local/share/PrismLauncher/ ~/.local/share/PrismLauncher/)
-	elif [[ "$i" == "--libs" ]]; then
+	elif [[ "$i" == "--libs" ]]; then	# Some mods need library access in order to work properly
+						# Usually this is only necessary on the first launch and subsequent
+						# attempts to start the game can be fully restricted
 		EXTRA_OPTS+=(--bind ~/.local/share/PrismLauncher/libraries/ ~/.local/share/PrismLauncher/libraries/)
 	else
 		COMMAND+=("$i")
