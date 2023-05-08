@@ -37,7 +37,11 @@ for i in "$@"; do
 done
 
 # Set environment variables
-export WURST_OPENAI_KEY='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'
+export WURST_OPENAI_KEY='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'	# Yes I run Wurst for its ability to spoof vanilla on servers that try to block Fabric
+										# No this API key is not valid, but you can set your own
+										# if you want to use Wurst's chat autocomplete
+
+										# If you are a server owner who blocks Fabric, stop it! That's not cool. Some people like running mods like Sodium and No Chat Reports
 
 # This command was written for X11 and has not been tested on Wayland
 CMD=(bwrap --ro-bind / / --tmpfs /var/tmp --tmpfs /home/ --tmpfs /tmp \
